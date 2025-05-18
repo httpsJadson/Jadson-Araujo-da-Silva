@@ -30,6 +30,7 @@ Cabeçalho da Página
     width: 100%;
     top: 0;
     z-index: 99999;
+    border-bottom: 1px solid rgb(16, 215, 255);
 }
 #navbar ul{
     list-style: none;
@@ -117,6 +118,10 @@ inicio do site
 #apresentacao a:hover{
     background-color: rgb(16, 215, 255);
     color: #000000;
+}
+#links{
+    display: flex;
+    flex-wrap: wrap;
 }
 .seta-baixo {
   position: absolute;
@@ -242,14 +247,15 @@ Sobre
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 80%;
+    height: auto;
     
 }
 
 #projetos .item-list{
     width: 400px;
-    height: 500px;
+    height: 550px;
     background-color: hsl(240 10% 3.9%);
     border: 1px solid rgb(16, 215, 255);
     margin-bottom: 50px;
@@ -257,13 +263,102 @@ Sobre
     border-radius: 20px;
     box-shadow: 4px 4px 10px 0px rgba(0, 238, 255, 0.3);
     display: flex;
+    color: rgb(16, 215, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 30px;
+}
+#projetos .item-list img{
+    width: 500px;
+    margin-top: -70px;
+}
+#projetos .item-list h2{
+    font-size: 2em;
+    margin-top: 15px;
+    
+}
+#projetos .item-list p{
+    max-width: 350px;
+}
+#projetos .item-list:hover{
+    width: 450px;
+    height: 590px;
+    background-color: rgb(16, 215, 255);
+    color: hsl(240 10% 3.9%);
+}
+
+
+/**
+Contato*/
+#contato{
+    background-color: hsl(240deg 3.7% 15.9% / 50%);
+    color: rgb(185, 185, 185);
+    padding: 20px;
+    width: 97.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#contato h3{
+    font-size: 3em;
+    margin-top: 100px;
+}
+#contato p{
+    margin-top: -20px;
+    max-width: 800px;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 3%;
+}
+#contato .list{
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    
+}
+#contato .item-list{
+    width: 250px;
+    height: 150px;
+    background-color: hsl(240 10% 3.9%);
+    border: 1px solid rgb(16, 215, 255);
+    color: rgb(16, 215, 255);
+    margin-bottom: 50px;
+    transition: 0.4s;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 238, 255, 0.3);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+#contato .list a{
+    text-decoration: none;
+}
+#contato .item-list h2{
+    font-size: 1.5em;
+    margin-top: -2px;
+}
+#contato .item-list p{
+    font-size: 0.95em;
+    max-width: 350px;
+}
+#contato .item-list i{
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+#contato .item-list:hover{
+    width: 260px;
+    height: 160px;
+    /**border-color: red;
+    box-shadow: 4px 4px 10px 0px rgba(255, 0, 0, 0.534);**/
+    color: rgb(0, 0, 0);
+    background-color: rgb(16, 215, 255);
 
-#projetos .item-list:hover{
-    width: 450px;
-    height: 550px;
-    border-color: red;
-    box-shadow: 4px 4px 10px 0px rgba(255, 0, 0, 0.534);
 }
