@@ -43,41 +43,26 @@
             </a>
 
             <div id="foto">
-                <img src="IMG_4831 (1).jpg" alt="">
+                <img src="Design sem nome (1).svg" alt="">
             </div>
             
 
         </section>
 
-        <sectio id="sobre">
+        <section id="sobre">
            <h3>Sobre Mim:</h3>
            <p>
                 Estudante concluindo o ensino médio integrado em Redes de Computadores, com interesse em tecnologia e foco em desenvolvimento web,além de experiência com projetos em equipe, sendo premiado nacionalmente. É proativo, organizado e busca uma oportunidade para aplicar suas habilidades e crescer na área de TI.
             </p>
             <div class="list">
-                <a href="certificados.html">
+                <a href="https://www.credly.com/users/jadson-a-silva">
                     <div class="item-list">
                         <i class="bi bi-patch-check"></i>
                         <h2>Certificados</h2>
                         <p>Conheça minhas conquistas acadêmicas e profissionais por meio dos certificados disponíveis em meu portfólio.</p>
                     </div>
                 </a>
-                <a href="eventos.html">
-                    <div class="item-list">
-                        <i class="bi bi-trophy"></i>
-                        <h2>Eventos e Premiações</h2>
-                        <p>Confira os eventos e premiações dos quais participei, que demonstram meu compromisso com o aprendizado contínuo e a excelência profissional.</p>
-
-                    </div>
-                </a>
-                <a href="habilidade.html">
-                    <div class="item-list">
-                        <i class="bi bi-tools"></i>
-                        <h2>Habilidades e Competências</h2>
-                        <p>Explore minhas competências e habilidades, desenvolvidas ao longo da formação e de experiências práticas na área de tecnologia.</p>
-                    </div>
-                </a>
-                    <a href="https://www.cvwizard.com/d/1x31vcFecO0Ntuoxc0Jl3a/view">
+                <a href="https://www.cvwizard.com/d/1x31vcFecO0Ntuoxc0Jl3a/view">
                     <div class="item-list">
                        <i class="bi bi-file-earmark-person-fill"></i>
                         <h2>Currículo</h2>
@@ -87,9 +72,9 @@
                 </a>
               
             </div>
-        </sectio>
+        </section>
 
-        <sectio id="projetos">
+        <section id="projetos">
             <h3>Projetos</h3>
            <p>
                 Conheça meus projetos
@@ -100,10 +85,15 @@
                         <img src="PITCH - E-Vision - EEEP.svg" alt="" id="e-vision">
                         <h2>E-vision</h2>
                         <p>Fui um dos desenvolvedores do E-Vision, um projeto em Python focado em acessibilidade. Usamos visão computacional e IA para ajudar pessoas com deficiência visual, convertendo informações visuais em áudio. Foi uma experiência marcante aplicar tecnologia para inclusão.</p>
+                        <div id="links">
+                            <a href="#">Ver Codigo</a>
+                            <a href="#">Funcionamento</a>
+                        </div>
                     </div>
+                    
             </div>
-        </sectio>
-        <sectio id="contato">
+        </section>
+        <section id="contato">
             <h3>Entre em Contato</h3>
             <div class="list"> 
             <a href="mailto:dev.jadson27@gmail.com">
@@ -134,10 +124,36 @@
                     <p>+55 (85) 9 91277592</p>
                 </div>
             </a>
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script>
+                emailjs.init("kv87MOmfGEjkmMep0");
+
+                function enviarEmail(e) {
+                    e.preventDefault();
+                    emailjs.sendForm("service_rgu2v68", "template_2ju9q5a",  "#formulario")
+                    .then(() => alert("Email enviado com sucesso!"))
+                    .catch((err) => {
+                        console.error("Erro real:", err);
+                        alert("Erro ao enviar email: " + (err.text || JSON.stringify(err)));
+                        });
+
+                }
+            </script>
+
+            <form id="formulario" onsubmit="enviarEmail(event)">
+                <input name="nome" type="text" placeholder="Seu nome" required />
+                <input name="email" type="email" placeholder="Seu e-mail" required />
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
-            </a>
+        </section>
+        <section id="rodape">
+            <div class="container">
+                <p>&copy; 2025 Jadson Araújo da Silva. Todos os direitos reservados.</p>
             </div>
-        </sectio>
+        </section>
+
     </div>
 </body>
 </html>
