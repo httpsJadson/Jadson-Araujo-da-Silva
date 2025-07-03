@@ -12,6 +12,14 @@ Body{
 html {
   scroll-behavior: smooth;
 }
+#sobre .list,
+#projetos .list,
+#contato .list {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
 
 /**
 Cabeçalho da Página
@@ -27,7 +35,7 @@ Cabeçalho da Página
     backdrop-filter: blur(15px);
     position: static;
     position: fixed;
-    width: 100%;
+    width: 102%;
     top: 0;
     z-index: 99999;
     border-bottom: 1px solid rgb(16, 215, 255);
@@ -51,8 +59,9 @@ header a:hover{
 #curriculo{
     border: 2px solid rgb(16, 215, 255);
     border-radius: 10px;
-    padding: 15px;
     width: 100px;
+    max-width: 100%;
+    padding: 10px;
     box-shadow: 4px 4px 10px 0px rgba(0, 238, 255, 0.3);
 }
 #curriculo:hover{
@@ -66,26 +75,30 @@ header a:hover{
 /**
 inicio do site
 */
-#conteiner{
+#conteiner {
+    width: 100%;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 10%;
+    overflow-x: hidden;
 }
-#home{
-    width: 80%;
+#home {
+    width: 100%; /* antes 80% */
     display: flex;
-    float: left;
-    align-items: end;
+    flex-direction: row;
+    align-items: flex-end;
     padding: 30px;
     justify-content: space-around;
     position: relative;
     margin-bottom: 5%;
 }
-#foto img{
-    width: 350px;
+
+#foto img {
+    width: 100%;
+    max-width: 350px; /* limite max */
+    min-width: 150px;
     border-radius: 100px;
     border: 4px solid rgb(16, 215, 255);
 }
@@ -291,8 +304,9 @@ Sobre
 #projetos #links a{
     border: 2px solid rgb(16, 215, 255);
     border-radius: 10px;
-    padding: 15px;
-    width: 120px;
+    width: 100px;
+    max-width: 120px;
+    padding: 10px;
     box-shadow: 4px 4px 10px 0px rgba(0, 238, 255, 0.3);
     text-align: center;
     text-decoration: none;
@@ -385,14 +399,14 @@ Contato*/
 }
 
  form {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
     background-color: hsl(240 10% 3.9%);
-    padding: 30px;
     border-radius: 20px;
     border: 1px solid rgb(16, 215, 255);
     box-shadow: 0 0 10px rgb(16, 215, 255);
-    max-width: 400px;
-    width: 100%;
-    height: 450px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -453,7 +467,9 @@ Contato*/
     color: #4ade80;
   }
 
-
+.menu-toggle{
+    display: none;
+}
 #rodape{
     color: #ffffff;
     width: 100%;
@@ -461,4 +477,160 @@ Contato*/
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ======================================
+    MEDIA QUERIES PARA TELAS PEQUENAS
+======================================== */
+@media (max-width: 1000px) {
+    .topo{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .menu-toggle{
+        display: block;
+        font-size: 3em;
+        margin: 15px;
+    }
+    #home {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin-top: 130px;
+    }
+
+    #apresentacao h1 {
+        font-size: 3em;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #home #links{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    #links a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #apresentacao{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #apresentacao p {
+        font-size: 1.5em;
+        max-width: 80%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #foto img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+    .seta-baixo{
+        display: none;
+    }
+    #navbar ul {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    #navbar #nav-links{
+        display: none;
+        
+    }
+    #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    #navbar #nav-links.active{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    #navbar ul {
+    top: 60px; /* abaixo do botão hambúrguer */
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    width: auto;
+    }
+    #navbar li{
+        margin-top: 20px;
+    }
+    #navbar a{
+        font-size: 1.2em;
+    }
+  
+
+    #sobre .item-list,
+    #projetos .item-list,
+    #contato .item-list {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #sobre p{
+        width: 80%;
+    }
+    #sobre a{
+        padding: 15px;
+    }
+    #contato .item-list{
+        min-width: 250px;
+    }
+    #projetos .item-list{
+        min-width: 350px;
+    }
+
+    #projetos .item-list p{
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .topo{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .menu-toggle{
+        display: block;
+        font-size: 3em;
+        margin: 15px;
+    }
+
+    #apresentacao h1 {
+        font-size: 2.2em;
+    }
+
+    #apresentacao p {
+        font-size: 1.2em;
+    }
+
+    #projetos .item-list img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #curriculo {
+        width: 80px;
+        padding: 8px;
+    }
+
+    button, #projetos #links a {
+        width: 90px;
+        padding: 10px;
+    }
 }

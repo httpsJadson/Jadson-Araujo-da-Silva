@@ -16,7 +16,10 @@
                 <h2>Jadson Araújo da Silva</h2></a>
             </div>
             <nav id="navbar">
-                <ul>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <ul id="nav-links">
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -85,10 +88,10 @@
                         <img src="PITCH - E-Vision - EEEP.svg" alt="" id="e-vision">
                         <h2>E-vision</h2>
                         <p>Fui um dos desenvolvedores do E-Vision, um projeto em Python focado em acessibilidade. Usamos visão computacional e IA para ajudar pessoas com deficiência visual, convertendo informações visuais em áudio. Foi uma experiência marcante aplicar tecnologia para inclusão.</p>
-                        <div id="links">
+                        <!---<div id="links">
                             <a href="#">Ver Codigo</a>
                             <a href="#">Funcionamento</a>
-                        </div>
+                        </div>----->
                     </div>
                     
             </div>
@@ -155,5 +158,22 @@
         </section>
 
     </div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active'); // botão ativo/inativo
+    navLinks.classList.toggle('active');   // menu ativo/inativo
+  });
+});
+
+</script>
+
+
 </body>
 </html>
