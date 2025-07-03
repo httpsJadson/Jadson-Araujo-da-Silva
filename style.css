@@ -340,6 +340,7 @@ Contato*/
 #contato h3{
     font-size: 3em;
     margin-top: 100px;
+    text-align: center;
 }
 #contato p{
     margin-top: -20px;
@@ -502,14 +503,22 @@ Contato*/
 
     #apresentacao h1 {
         font-size: 3em;
-        max-width: 100%;
+        max-width: 50%;
+        min-width: 200px;
         text-align: center;
     }
-
-    #home #links{
+    span#nome{
+        margin: 0px;
+    }
+    #apresentacao #links{
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
+    }
+    #apresentacao #links a{
+        margin: 0px;
+        margin-bottom: 20px;
     }
     #links a{
         display: flex;
@@ -559,11 +568,11 @@ Contato*/
         transition: 0.5s;
     }
     #navbar ul {
-    top: 60px; /* abaixo do botão hambúrguer */
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    width: auto;
+        top: 60px; /* abaixo do botão hambúrguer */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        width: auto;
     }
     #navbar li{
         margin-top: 20px;
@@ -608,17 +617,23 @@ Contato*/
     .menu-toggle{
         display: block;
         font-size: 3em;
-        margin: 15px;
+        margin: 0px;
     }
-
+    #nome{
+        min-width: 200px;
+    }
     #apresentacao h1 {
         font-size: 2.2em;
+        min-width: 200px;
     }
 
     #apresentacao p {
         font-size: 1.2em;
     }
-
+    #apresentacao #links{
+        display: flex;
+        align-items: center;
+    }
     #projetos .item-list img {
         width: 100%;
         margin-top: 0;
@@ -632,5 +647,8 @@ Contato*/
     button, #projetos #links a {
         width: 90px;
         padding: 10px;
+    }
+    #contato h3{
+        text-align: center;
     }
 }
