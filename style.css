@@ -606,6 +606,8 @@ Contato*/
     #projetos .item-list p{
         width: 90%;
     }
+    #sobre .item-list{
+        min-height: 300px;
 }
 
 @media (max-width: 600px) {
